@@ -2,7 +2,7 @@
 
 Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
 Bier-Kasse für alle Posts: `https://www.paypal.com/paypalme/ksmetana`
-Service-Anfragen: `smetana@betriko.de`
+Service-Anfragen: `k@smetana.be`
 
 **Hinweis zu Instagram:** Captions verlinken nicht klickbar. Beide Links (GitHub und PayPal) in die Bio oder in den Link-in-Bio-Baukasten legen und in der Caption darauf verweisen.
 
@@ -50,7 +50,7 @@ Service-Anfragen: `smetana@betriko.de`
 > Composer rein, fertig:
 > `composer require smetana/module-garant`
 >
-> Lieber machen lassen? Ich installiere und konfiguriere es in deinem Shop, inklusive Attribut-Mapping auf eure Produktdaten. DM oder smetana@betriko.de.
+> Lieber machen lassen? Ich installiere und konfiguriere es in deinem Shop, inklusive Attribut-Mapping auf eure Produktdaten. DM oder k@smetana.be.
 >
 > Bier für den Entwickler: 🍺 paypal.me/ksmetana (Link in Bio). Spart Kosten, macht gute Laune.
 >
@@ -110,7 +110,7 @@ Service-Anfragen: `smetana@betriko.de`
 > Code, Doku und Screenshots: github.com/konstantins90/garan – Installation via `composer require smetana/module-garant`. Feedback und Issues willkommen. Keine Rechtsberatung, aber fertiger Code.
 
 **Thread 9 (Service)**
-> Wenn im Team kein Magento-Entwickler sitzt: Ich übernehme Installation, Konfiguration je Store View, das Attribut-Mapping auf eure bestehenden Produktdaten und den Abnahme-Check auf allen drei Flächen. Anfrage an smetana@betriko.de.
+> Wenn im Team kein Magento-Entwickler sitzt: Ich übernehme Installation, Konfiguration je Store View, das Attribut-Mapping auf eure bestehenden Produktdaten und den Abnahme-Check auf allen drei Flächen. Anfrage an k@smetana.be.
 
 **Thread 10 (Bier)**
 > Und falls dir das Modul ein Wochenende Anhänge-Lesen erspart hat: das Modul ist kostenlos, das Bier danach nicht. 🍺 paypal.me/ksmetana – Beer-driven development: Bugs werden nüchtern gefixt, Features mit guter Laune gebaut.
@@ -144,7 +144,7 @@ Service-Anfragen: `smetana@betriko.de`
 > Code and docs: github.com/konstantins90/garan – install with `composer require smetana/module-garant`. Issues and feedback welcome. Not legal advice, just working code.
 
 **Thread 9 (service)**
-> No Magento developer on the team? I can take it over: installation, configuration per store view, attribute mapping onto your existing product data and a final check on product page, cart and checkout. Write to smetana@betriko.de.
+> No Magento developer on the team? I can take it over: installation, configuration per store view, attribute mapping onto your existing product data and a final check on product page, cart and checkout. Write to k@smetana.be.
 
 **Thread 10 (beer)**
 > And if this saved you a weekend of reading annexes: the module is free, the beer afterwards is not. 🍺 paypal.me/ksmetana – beer-driven development: bugs get fixed sober, features get built in a good mood.
@@ -160,10 +160,10 @@ Service-Anfragen: `smetana@betriko.de`
 > EU Regulation 2025/1960 applies from 27 Sep 2026: the legal guarantee notice and the GARAN label must be visible before purchase. Now available as an open source Magento 2 module – product page, cart, checkout, 24 languages, QR codes. github.com/konstantins90/garan
 
 **Antwort-Post / Reply (DE)**
-> Installation und Konfiguration übernehme ich auf Wunsch komplett – inklusive Attribut-Mapping und Abnahme-Check: smetana@betriko.de. Bier für den Entwickler: paypal.me/ksmetana 🍺
+> Installation und Konfiguration übernehme ich auf Wunsch komplett – inklusive Attribut-Mapping und Abnahme-Check: k@smetana.be. Bier für den Entwickler: paypal.me/ksmetana 🍺
 
 **Reply (EN)**
-> Happy to take over installation and configuration, attribute mapping and the final check included: smetana@betriko.de. Beer for the developer: paypal.me/ksmetana 🍺
+> Happy to take over installation and configuration, attribute mapping and the final check included: k@smetana.be. Beer for the developer: paypal.me/ksmetana 🍺
 
 ---
 
@@ -176,7 +176,7 @@ Service-Anfragen: `smetana@betriko.de`
 > The module is free, the beer afterwards is not: 🍺 https://www.paypal.com/paypalme/ksmetana – a weekend of reading annexes versus one beer, unbeatable exchange rate.
 
 **Service, DE**
-> Installation, Konfiguration je Store View, Attribut-Mapping auf bestehende Produktdaten und Abnahme-Check auf Produktseite, Warenkorb und Checkout – kann ich übernehmen: smetana@betriko.de
+> Installation, Konfiguration je Store View, Attribut-Mapping auf bestehende Produktdaten und Abnahme-Check auf Produktseite, Warenkorb und Checkout – kann ich übernehmen: k@smetana.be
 
 **Service, EN**
-> Installation, configuration per store view, attribute mapping onto existing product data and a final check on product page, cart and checkout – I can take that over: smetana@betriko.de
+> Installation, configuration per store view, attribute mapping onto existing product data and a final check on product page, cart and checkout – I can take that over: k@smetana.be

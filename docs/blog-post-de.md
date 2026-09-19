@@ -64,7 +64,7 @@ Code und Dokumentation: **https://github.com/konstantins90/garan**
 
 ## Keine Zeit? Ich übernehme das
 
-Wenn im Team kein Magento-Entwickler sitzt oder der September näher kommt als die Kapazität: Ich installiere und konfiguriere das Modul in deinem Shop, mappe die Attribute auf deine bestehenden Produktdaten, pflege die Garantiedaten ein und prüfe die Darstellung auf Produktseite, im Warenkorb und im Checkout. Anfrage an **smetana@betriko.de**.
+Wenn im Team kein Magento-Entwickler sitzt oder der September näher kommt als die Kapazität: Ich installiere und konfiguriere das Modul in deinem Shop, mappe die Attribute auf deine bestehenden Produktdaten, pflege die Garantiedaten ein und prüfe die Darstellung auf Produktseite, im Warenkorb und im Checkout. Anfrage an **k@smetana.be**.
 
 ## 🍺 Und wenn es dir ein Wochenende gespart hat
 

@@ -203,9 +203,9 @@ Kein Magento-Entwickler im Haus oder einfach keine Zeit vor September? Ich über
 - Pflege der Garantiedaten für deine Produktpalette
 - Abnahme-Check auf Produktseite, im Warenkorb und im Checkout
 
-Anfrage per Mail an **smetana@betriko.de** oder als [GitHub-Issue](https://github.com/konstantins90/garan/issues).
+Anfrage per Mail an **k@smetana.be** oder als [GitHub-Issue](https://github.com/konstantins90/garan/issues).
 
-**EN:** Need it done for you? I install and configure the module in your shop, map the attributes onto your existing product data and verify the marks on product page, cart and checkout. Just write to **smetana@betriko.de**.
+**EN:** Need it done for you? I install and configure the module in your shop, map the attributes onto your existing product data and verify the marks on product page, cart and checkout. Just write to **k@smetana.be**.
 
 ## Lizenz
 

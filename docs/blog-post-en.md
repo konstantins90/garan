@@ -64,7 +64,7 @@ Code and documentation: **https://github.com/konstantins90/garan**
 
 ## No time? I can do it for you
 
-If there is no Magento developer on the team – or September arrives faster than your capacity – I install and configure the module in your shop, map the attributes onto your existing product data, fill in the guarantee values and verify the marks on product page, cart and checkout. Just write to **smetana@betriko.de**.
+If there is no Magento developer on the team – or September arrives faster than your capacity – I install and configure the module in your shop, map the attributes onto your existing product data, fill in the guarantee values and verify the marks on product page, cart and checkout. Just write to **k@smetana.be**.
 
 ## 🍺 And if it saved you a weekend
 
