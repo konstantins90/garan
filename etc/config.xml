@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <smetana_garant>
+            <general>
+                <enabled>1</enabled>
+                <hide_notice_with_label>0</hide_notice_with_label>
+            </general>
+            <notice>
+                <enabled>1</enabled>
+                <show_on_pdp>1</show_on_pdp>
+                <show_in_cart>1</show_in_cart>
+                <show_in_checkout>1</show_in_checkout>
+                <pdp_variant>compact</pdp_variant>
+                <pdp_expanded>1</pdp_expanded>
+                <cms_page>gesetzliche-gewaehrleistung</cms_page>
+                <image_language>DE</image_language>
+                <image_variant>color</image_variant>
+                <link_label>Vollständige Mitteilung anzeigen</link_label>
+                <qr_url>https://europa.eu/youreurope/citizens/consumers/shopping/guarantees/index_de.htm</qr_url>
+                <title>GESETZLICHE GEWÄHRLEISTUNG</title>
+                <core_statement>Mindestens zwei Jahre gesetzliche Gewährleistung der Vertragsmäßigkeit für Waren, die in der Europäischen Union verkauft werden.</core_statement>
+                <consumer_intro>Verbraucherinnen und Verbraucher können ihre Rechte im Rahmen des gesetzlichen Gewährleistungsrechts geltend machen, z. B. wenn die Waren</consumer_intro>
+                <example_description>nicht der Beschreibung entsprechen,</example_description>
+                <example_function>nicht bestimmungsgemäß funktionieren.</example_function>
+                <seller_liability>Verkäufer haften für jede Vertragswidrigkeit, die zum Zeitpunkt der Lieferung der Waren bestand und innerhalb des Zeitraums der gesetzlichen Gewährleistung erkennbar wird. Verkäufer müssen in solchen Fällen Folgendes anbieten:</seller_liability>
+                <remedy_repair>kostenlose Nachbesserung oder kostenlose Ersatzlieferung,</remedy_repair>
+                <remedy_refund>in bestimmten Fällen eine Preisminderung oder eine vollständige Erstattung des Kaufpreises.</remedy_refund>
+                <national_note>In einigen Ländern gilt ein längerer Zeitraum für die gesetzliche Gewährleistung. Für gebrauchte Waren kann ein kürzerer Zeitraum gelten, jedoch nicht weniger als ein Jahr.</national_note>
+                <more_info>Für weitere Informationen zu Ihren Rechten in einem bestimmten Land scannen Sie den nachstehenden QR-Code oder fragen Sie den Verkäufer.</more_info>
+                <qr_caption>europa.eu/youreurope/guarantees</qr_caption>
+                <what_to_do_title>Was ist zu tun, wenn Sie vertragswidrige Waren erhalten?</what_to_do_title>
+                <step1>Melden Sie dem Verkäufer das Problem so bald wie möglich.</step1>
+                <step2>Legen Sie einen Kaufnachweis vor, z. B. die Quittung, Rechnung oder einen Kontoauszug.</step2>
+                <footer_text>Verkäufer und Hersteller können auch gewerbliche Garantien gewähren, die unabhängig von der gesetzlichen Gewährleistung gelten. Diese GARAN-Kennzeichnung zeigt beispielsweise, dass der Hersteller eine gewerbliche Haltbarkeitsgarantie ohne zusätzliche Kosten gewährt, die die gesamte Ware abdeckt.</footer_text>
+            </notice>
+            <label>
+                <enabled>1</enabled>
+                <show_on_pdp>1</show_on_pdp>
+                <show_in_cart>1</show_in_cart>
+                <show_in_checkout>1</show_in_checkout>
+                <pdp_variant>compact</pdp_variant>
+                <pdp_expanded>0</pdp_expanded>
+                <qr_url>https://europa.eu/youreurope/citizens/consumers/shopping/commercial-guarantee-durability/index_de.htm</qr_url>
+                <min_duration>2.5</min_duration>
+                <default_brand></default_brand>
+                <brand_attribute>manufacturer</brand_attribute>
+                <model_attribute>sku</model_attribute>
+                <duration_attribute></duration_attribute>
+            </label>
+        </smetana_garant>
+    </default>
+</config>

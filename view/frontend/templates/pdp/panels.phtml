@@ -1,0 +1,79 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Smetana\Garant\ViewModel\NoticeViewModel $notice */
+/** @var \Smetana\Garant\ViewModel\LabelViewModel $label */
+$notice = $block->getData('notice_view_model');
+$label = $block->getData('label_view_model');
+if (!$notice instanceof \Smetana\Garant\ViewModel\NoticeViewModel
+    || !$label instanceof \Smetana\Garant\ViewModel\LabelViewModel
+) {
+    return;
+}
+
+$showNotice = $notice->isVisibleOn(\Smetana\Garant\Helper\Config::AREA_PDP);
+$labelData = $label->isVisibleOn(\Smetana\Garant\Helper\Config::AREA_PDP) ? $label->resolveCurrentProduct() : null;
+if (!$showNotice && !$labelData) {
+    return;
+}
+
+$labelVariant = $label->getVariant(\Smetana\Garant\Helper\Config::AREA_PDP);
+?>
+<div class="garant-pdp">
+    <?php if ($showNotice): ?>
+        <?= $block->getLayout()
+            ->createBlock(\Smetana\Garant\Block\Notice::class)
+            ->setTemplate('Smetana_Garant::notice/panel.phtml')
+            ->setData('garant_area', \Smetana\Garant\Helper\Config::AREA_PDP)
+            ->setData('garant_expanded', $notice->isPdpExpanded())
+            ->toHtml() ?>
+    <?php endif; ?>
+
+    <?php if ($labelData): ?>
+        <?php
+        $labelOpen = $label->isPdpExpanded() ? 'true' : 'false';
+        ?>
+        <div class="garant-panel<?= $label->isPdpExpanded() ? ' active' : '' ?>"
+             data-mage-init='{"collapsible":{"openedState":"active","active":<?= $labelOpen ?>,"collapsible":true,"saveState":false}}'>
+            <?php if ($labelVariant === \Smetana\Garant\Helper\Config::VARIANT_COMPACT): ?>
+                <?php // Nested format of Annex II: the compact artwork is the tab itself. ?>
+                <div data-role="title" class="garant-panel__title garant-panel__title--badge">
+                    <span class="garant-panel__badge" aria-hidden="true">
+                        <?= /* @noEscape */ $label->getBadgeSvg($labelData) ?>
+                    </span>
+                    <span class="garant-panel__sr"><?= $block->escapeHtml(
+                        __('GARAN manufacturer guarantee (Garan):')
+                    ) ?></span>
+                </div>
+            <?php else: ?>
+                <div data-role="title" class="garant-panel__title">
+                    <span class="garant-panel__icon" aria-hidden="true">
+                        <?= /* @noEscape */ $label->getEuShieldSvg() ?>
+                    </span>
+                    <span><?= $block->escapeHtml(__('GARAN manufacturer guarantee (Garan):')) ?></span>
+                </div>
+            <?php endif; ?>
+            <div data-role="content" class="garant-panel__content">
+                <?= $block->getLayout()
+                    ->createBlock(\Magento\Framework\View\Element\Template::class)
+                    ->setTemplate('Smetana_Garant::label/standard.phtml')
+                    ->setData('label_data', $labelData)
+                    ->setData('view_model', $label)
+                    ->toHtml() ?>
+                <?php $qrUrl = $label->getQrUrl(); ?>
+                <?php if ($qrUrl !== ''): ?>
+                    <?php // Target of the QR code, reachable without a camera. ?>
+                    <p class="garant-panel__more">
+                        <a class="garant-panel__qr-link" href="<?= $block->escapeUrl($qrUrl) ?>"
+                           target="_blank" rel="noopener">
+                            <?= $block->escapeHtml(__('More information on the Your Europe portal')) ?>
+                        </a>
+                    </p>
+                <?php endif; ?>
+                <button type="button" class="garant-panel__collapse"
+                        data-mage-init='{"Smetana_Garant/js/garant-collapse":{}}'>
+                    <?= $block->escapeHtml(__('Collapse')) ?>
+                </button>
+            </div>
+        </div>
+    <?php endif; ?>
+</div>

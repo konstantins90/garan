@@ -1,0 +1,44 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Smetana\Garant\ViewModel\LabelViewModel $viewModel */
+$labelData = $block->getData('label_data');
+$viewModel = $block->getData('view_model') ?: $block->getData('label_view_model');
+if (!$labelData instanceof \Smetana\Garant\Model\Label\LabelData) {
+    return;
+}
+if (!$viewModel instanceof \Smetana\Garant\ViewModel\LabelViewModel) {
+    return;
+}
+
+$qrUrl = $viewModel->getQrUrl();
+$modalInit = json_encode([
+    'Smetana_Garant/js/garant-modal' => ['title' => (string)__('Commercial durability guarantee')],
+]);
+?>
+<?php // Compact artwork on the line item; the full label of Annex II opens in a modal. ?>
+<div class="garant-chip garant-chip--label" data-mage-init='<?= $block->escapeHtmlAttr($modalInit) ?>'>
+    <button type="button" class="garant-chip__trigger" data-role="garant-modal-trigger">
+        <span class="garant-chip__art" aria-hidden="true">
+            <?= /* @noEscape */ $viewModel->getBadgeSvg($labelData) ?>
+        </span>
+        <span class="garant-chip__hint"><?= $block->escapeHtml(__('Show guarantee label')) ?></span>
+        <span class="garant-chip__sr"><?= $block->escapeHtml(
+            __('Commercial durability guarantee: %1 years', $labelData->getDurationDisplay())
+        ) ?></span>
+    </button>
+    <div class="garant-chip__modal" data-role="garant-modal-content" hidden>
+        <?= $block->getLayout()
+            ->createBlock(\Magento\Framework\View\Element\Template::class)
+            ->setTemplate('Smetana_Garant::label/standard.phtml')
+            ->setData('label_data', $labelData)
+            ->setData('view_model', $viewModel)
+            ->toHtml() ?>
+        <?php if ($qrUrl !== ''): ?>
+            <p class="garant-chip__more">
+                <a href="<?= $block->escapeUrl($qrUrl) ?>" target="_blank" rel="noopener">
+                    <?= $block->escapeHtml(__('More information on the Your Europe portal')) ?>
+                </a>
+            </p>
+        <?php endif; ?>
+    </div>
+</div>

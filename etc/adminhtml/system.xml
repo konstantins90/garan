@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="smetana_garant" translate="label" sortOrder="930" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Garant (EU)</label>
+            <tab>smetana_code</tab>
+            <resource>Smetana_Garant::config</resource>
+
+            <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Allgemeine Einstellungen</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Modul aktivieren</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Schaltet Gewährleistungshinweis und GARAN-Label global ein oder aus.</comment>
+                </field>
+                <field id="hide_notice_with_label" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gewährleistung ausblenden, wenn Garantie vorhanden</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Zeigt pro Produkt nur eine Kennzeichnung: Liegt eine gewerbliche Haltbarkeitsgarantie vor, entfällt der Gewährleistungshinweis.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+
+            <group id="notice" translate="label" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Gesetzliche Gewährleistung</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Gewährleistungshinweis aktivieren</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="smetana_garant/general/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="show_on_pdp" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Auf der Produktseite anzeigen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="show_in_cart" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Im Warenkorb anzeigen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="show_in_checkout" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Im Checkout anzeigen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="pdp_variant" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Variante Produktseite</label>
+                    <source_model>Smetana\Garant\Model\Config\Source\DisplayVariant</source_model>
+                    <comment>Standard = volle Mitteilung. Kompakt = Vorschau mit Link zur CMS-Seite.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="pdp_expanded" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Panel auf der Produktseite geöffnet</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="cms_page" translate="label comment" type="select" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>CMS-Seite mit vollständiger Mitteilung</label>
+                    <source_model>Magento\Cms\Model\Config\Source\Page</source_model>
+                    <comment>Ziel des Links „Vollständige Mitteilung anzeigen“. Standard: gesetzliche-gewaehrleistung.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="image_language" translate="label comment" type="select" sortOrder="102" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Sprache der Mitteilungsgrafik</label>
+                    <source_model>Smetana\Garant\Model\Config\Source\NoticeLanguage</source_model>
+                    <comment>Amtliche Grafik nach Anhang I, die im Panel auf der Produktseite gezeigt wird.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="image_variant" translate="label comment" type="select" sortOrder="104" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Druckvariante der Mitteilungsgrafik</label>
+                    <source_model>Smetana\Garant\Model\Config\Source\NoticeImageVariant</source_model>
+                    <comment>Schwarzweiß nur verwenden, wenn die Grafik in dieser Sprache geliefert wurde.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="link_label" translate="label" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Linktext zur vollständigen Mitteilung</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="qr_url" translate="label comment" type="text" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>QR-Code-URL (Gewährleistung)</label>
+                    <validate>validate-url</validate>
+                    <comment>Ziel des QR-Codes auf der harmonisierten Mitteilung. Der Code wird daraus automatisch erzeugt.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="title" translate="label" type="text" sortOrder="200" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Titel</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="core_statement" translate="label" type="textarea" sortOrder="210" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Kernaussage</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="consumer_intro" translate="label" type="textarea" sortOrder="220" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Einleitung Verbraucherrechte</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="example_description" translate="label" type="text" sortOrder="230" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Beispiel: Beschreibung</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="example_function" translate="label" type="text" sortOrder="240" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Beispiel: Funktion</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="seller_liability" translate="label" type="textarea" sortOrder="250" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Verkäuferhaftung</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="remedy_repair" translate="label" type="text" sortOrder="260" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Abhilfe: Nachbesserung / Ersatz</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="remedy_refund" translate="label" type="text" sortOrder="270" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Abhilfe: Preisminderung / Erstattung</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="national_note" translate="label" type="textarea" sortOrder="280" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hinweis nationales Recht</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="more_info" translate="label" type="textarea" sortOrder="290" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Hinweis QR-Code / Verkäufer</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="what_to_do_title" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Überschrift „Was ist zu tun“</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="step1" translate="label" type="text" sortOrder="310" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Schritt 1</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="step2" translate="label" type="text" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Schritt 2</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="footer_text" translate="label" type="textarea" sortOrder="330" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fußzeile GARAN-Querverweis</label>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+
+            <group id="label" translate="label" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>GARAN Haltbarkeitsgarantie</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>GARAN-Label aktivieren</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="smetana_garant/general/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="show_on_pdp" translate="label" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Auf der Produktseite anzeigen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="show_in_cart" translate="label" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Im Warenkorb anzeigen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="show_in_checkout" translate="label" type="select" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Im Checkout anzeigen</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="pdp_variant" translate="label comment" type="select" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Variante Produktseite</label>
+                    <source_model>Smetana\Garant\Model\Config\Source\DisplayVariant</source_model>
+                    <comment>Standard = vollständige Kennzeichnung. Kompakt = geschachteltes Badge, das beim Öffnen die volle Kennzeichnung zeigt.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="pdp_expanded" translate="label" type="select" sortOrder="90" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Panel auf der Produktseite geöffnet</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="qr_url" translate="label comment" type="text" sortOrder="95" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>QR-Code-URL (GARAN)</label>
+                    <validate>validate-url</validate>
+                    <comment>Ziel des QR-Codes auf der GARAN-Kennzeichnung. Der Code wird daraus automatisch erzeugt.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="min_duration" translate="label comment" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Mindest-Garantiedauer (Jahre)</label>
+                    <validate>validate-number validate-greater-than-zero</validate>
+                    <comment>Die Kennzeichnung darf nur bei mehr als zwei Jahren erscheinen. Standard: 2,5.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="default_brand" translate="label comment" type="text" sortOrder="110" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Fallback Hersteller / Marke</label>
+                    <comment>Wird verwendet, wenn das Produktattribut und das gemappte Attribut leer sind.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="brand_attribute" translate="label comment" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Mapping Hersteller / Marke</label>
+                    <source_model>Smetana\Garant\Model\Config\Source\ProductAttributes</source_model>
+                    <comment>Fallback-Attribut, wenn „Hersteller / Marke“ am Produkt leer ist.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="model_attribute" translate="label comment" type="select" sortOrder="130" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Mapping Modellkennung</label>
+                    <source_model>Smetana\Garant\Model\Config\Source\ProductAttributes</source_model>
+                    <comment>Fallback-Attribut, wenn „Modellkennung“ am Produkt leer ist. Standard: SKU.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="duration_attribute" translate="label comment" type="select" sortOrder="140" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Mapping Garantiedauer</label>
+                    <source_model>Smetana\Garant\Model\Config\Source\ProductAttributes</source_model>
+                    <comment>Optional. Fallback, wenn „Garantiedauer“ am Produkt leer ist.</comment>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

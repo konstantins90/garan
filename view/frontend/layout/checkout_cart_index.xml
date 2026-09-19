@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <!-- Both marks sit on the line item, not in the order summary. -->
+        <referenceBlock name="additional.product.info">
+            <block class="Smetana\Garant\Block\Notice"
+                   name="garant.notice.cart.item"
+                   template="Smetana_Garant::notice/compact.phtml">
+                <arguments>
+                    <argument name="garant_area" xsi:type="string">cart</argument>
+                </arguments>
+            </block>
+            <block class="Smetana\Garant\Block\Label"
+                   name="garant.label.cart.item"
+                   template="Smetana_Garant::label/item.phtml">
+                <arguments>
+                    <argument name="garant_area" xsi:type="string">cart</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+    </body>
+</page>

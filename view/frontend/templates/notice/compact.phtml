@@ -1,0 +1,36 @@
+<?php
+/** @var \Smetana\Garant\Block\Notice $block */
+/** @var \Smetana\Garant\ViewModel\NoticeViewModel $viewModel */
+$viewModel = $block->getViewModel();
+if (!$block->isGarantVisible()) {
+    return;
+}
+
+// The delivered artwork is shown in the modal; without an image the HTML
+// reproduction of Annex I steps in.
+$modalTemplate = $viewModel->getImageUrl() !== ''
+    ? 'Smetana_Garant::notice/artwork.phtml'
+    : 'Smetana_Garant::notice/full.phtml';
+
+$modalInit = json_encode([
+    'Smetana_Garant/js/garant-modal' => ['title' => $viewModel->getText('title')],
+]);
+?>
+<div class="garant-chip garant-chip--notice" data-mage-init='<?= $block->escapeHtmlAttr($modalInit) ?>'>
+    <button type="button" class="garant-chip__trigger" data-role="garant-modal-trigger">
+        <span class="garant-chip__mark" aria-hidden="true">
+            <?= /* @noEscape */ $viewModel->getArtworkShieldSvg() ?>
+        </span>
+        <span class="garant-chip__body">
+            <span class="garant-chip__title"><?= $block->escapeHtml($viewModel->getText('title')) ?></span>
+            <span class="garant-chip__hint"><?= $block->escapeHtml(__('Show notice')) ?></span>
+        </span>
+    </button>
+    <div class="garant-chip__modal" data-role="garant-modal-content" hidden>
+        <?= $block->getLayout()
+            ->createBlock(\Smetana\Garant\Block\Notice::class)
+            ->setTemplate($modalTemplate)
+            ->setData('garant_area', $block->getGarantArea())
+            ->toHtml() ?>
+    </div>
+</div>

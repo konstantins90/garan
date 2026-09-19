@@ -1,0 +1,22 @@
+<?php
+/** @var \Smetana\Garant\Block\Notice $block */
+/** @var \Smetana\Garant\ViewModel\NoticeViewModel $viewModel */
+$viewModel = $block->getViewModel();
+?>
+<div class="garant-notice garant-notice--teaser">
+    <div class="garant-notice__preview">
+        <div class="garant-notice__header garant-notice__header--mini">
+            <span class="garant-notice__logo" aria-hidden="true">
+                <?= /* @noEscape */ $viewModel->getEuShieldSvg() ?>
+            </span>
+            <strong><?= $block->escapeHtml($viewModel->getText('title')) ?></strong>
+        </div>
+        <div class="garant-notice__preview-grid">
+            <p class="garant-notice__core"><?= $block->escapeHtml($viewModel->getText('core_statement')) ?></p>
+            <p><?= $block->escapeHtml($viewModel->getText('national_note')) ?></p>
+        </div>
+    </div>
+    <a class="garant-notice__more" href="<?= $block->escapeUrl($viewModel->getFullPageUrl()) ?>">
+        <?= $block->escapeHtml($viewModel->getLinkLabel()) ?>
+    </a>
+</div>

@@ -1,0 +1,55 @@
+<?php
+/** @var \Smetana\Garant\Block\Notice $block */
+/** @var \Smetana\Garant\ViewModel\NoticeViewModel $viewModel */
+$viewModel = $block->getViewModel();
+$qrSvg = $viewModel->getQrSvg();
+?>
+<section class="garant-notice garant-notice--full" aria-label="<?= $block->escapeHtmlAttr(__('Legal guarantee')) ?>">
+    <header class="garant-notice__header">
+        <span class="garant-notice__logo" aria-hidden="true">
+            <?= /* @noEscape */ $viewModel->getEuShieldSvg() ?>
+        </span>
+        <h2 class="garant-notice__title"><?= $block->escapeHtml($viewModel->getText('title')) ?></h2>
+    </header>
+
+    <div class="garant-notice__grid">
+        <div class="garant-notice__col garant-notice__col--main">
+            <p class="garant-notice__core">
+                <?= $block->escapeHtml($viewModel->getText('core_statement')) ?>
+            </p>
+            <p><?= $block->escapeHtml($viewModel->getText('consumer_intro')) ?></p>
+            <ul class="garant-notice__checks">
+                <li><?= $block->escapeHtml($viewModel->getText('example_description')) ?></li>
+                <li><?= $block->escapeHtml($viewModel->getText('example_function')) ?></li>
+            </ul>
+            <p><?= $block->escapeHtml($viewModel->getText('seller_liability')) ?></p>
+            <ul class="garant-notice__checks">
+                <li><?= $block->escapeHtml($viewModel->getText('remedy_repair')) ?></li>
+                <li><?= $block->escapeHtml($viewModel->getText('remedy_refund')) ?></li>
+            </ul>
+        </div>
+        <aside class="garant-notice__col garant-notice__col--side">
+            <p><?= $block->escapeHtml($viewModel->getText('national_note')) ?></p>
+            <p><?= $block->escapeHtml($viewModel->getText('more_info')) ?></p>
+            <a class="garant-notice__qr" href="<?= $block->escapeUrl($viewModel->getQrUrl()) ?>" target="_blank" rel="noopener">
+                <?php if ($qrSvg): ?>
+                    <?= /* @noEscape */ $qrSvg ?>
+                <?php endif; ?>
+                <span><?= $block->escapeHtml($viewModel->getQrCaption()) ?></span>
+            </a>
+        </aside>
+    </div>
+
+    <div class="garant-notice__howto">
+        <h3><?= $block->escapeHtml($viewModel->getText('what_to_do_title')) ?></h3>
+        <ol>
+            <li><?= $block->escapeHtml($viewModel->getText('step1')) ?></li>
+            <li><?= $block->escapeHtml($viewModel->getText('step2')) ?></li>
+        </ol>
+    </div>
+
+    <footer class="garant-notice__footer">
+        <span class="garant-notice__garan-mark" aria-hidden="true">GARAN<?= /* @noEscape */ $viewModel->getCheckSvg() ?></span>
+        <p><?= $block->escapeHtml($viewModel->getText('footer_text')) ?></p>
+    </footer>
+</section>

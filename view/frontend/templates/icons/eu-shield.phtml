@@ -1,0 +1,30 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+$fill = $block->getData('fill') ?: '#ffffff';
+$star = $block->getData('star') ?: '#ffed00';
+?>
+<svg class="garant-eu-shield" viewBox="0 0 64 80" aria-hidden="true" focusable="false">
+    <path fill="<?= $block->escapeHtmlAttr($fill) ?>"
+          d="M32 2 58 12v24c0 18-11 30-26 42C17 66 6 54 6 36V12L32 2z"/>
+    <circle cx="32" cy="30" r="11" fill="none" stroke="<?= $block->escapeHtmlAttr($star) ?>" stroke-width="1.4"/>
+    <?php
+    $cx = 32;
+    $cy = 30;
+    $r = 15;
+    for ($i = 0; $i < 12; $i++):
+        $angle = deg2rad(-90 + $i * 30);
+        $x = $cx + $r * cos($angle);
+        $y = $cy + $r * sin($angle);
+        ?>
+        <polygon fill="<?= $block->escapeHtmlAttr($star) ?>"
+                 points="<?= sprintf('%.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f %.1f,%.1f',
+                     $x, $y - 2.2,
+                     $x + 0.8, $y - 0.6,
+                     $x + 2.1, $y - 0.6,
+                     $x + 1, $y + 0.3,
+                     $x + 1.4, $y + 1.8
+                 ) ?>"/>
+    <?php endfor; ?>
+    <text x="32" y="36" text-anchor="middle" fill="<?= $block->escapeHtmlAttr($star) ?>"
+          font-size="16" font-family="Inter, Arial, sans-serif" font-weight="700">G</text>
+</svg>

@@ -1,0 +1,24 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \Smetana\Garant\ViewModel\LabelViewModel $viewModel */
+$labelData = $block->getData('label_data');
+$viewModel = $block->getData('view_model') ?: $block->getData('label_view_model');
+if (!$labelData instanceof \Smetana\Garant\Model\Label\LabelData) {
+    return;
+}
+if (!$viewModel instanceof \Smetana\Garant\ViewModel\LabelViewModel) {
+    return;
+}
+
+// One running text with bold language codes; the pipes are ordinary characters so
+// the footer wraps and justifies like on the printed artwork.
+$entries = [];
+foreach ($viewModel->getFooterEntries() as $code => $text) {
+    $entries[] = '<b>' . $block->escapeHtml($code) . '</b> ' . $block->escapeHtml($text);
+}
+?>
+<article class="garant-label garant-label--standard"
+         aria-label="<?= $block->escapeHtmlAttr(__('Commercial guarantee of durability')) ?>">
+    <?= /* @noEscape */ $viewModel->getLabelSvg($labelData) ?>
+    <p class="garant-label__langs"><?= /* @noEscape */ implode(' | ', $entries) ?></p>
+</article>

@@ -1,0 +1,47 @@
+<?php
+/** @var \Smetana\Garant\Block\Notice $block */
+/** @var \Smetana\Garant\ViewModel\NoticeViewModel $viewModel */
+$viewModel = $block->getViewModel();
+$area = $block->getGarantArea();
+if (!$block->isGarantVisible()) {
+    return;
+}
+
+// The official artwork of Annex I is shown as delivered; the HTML reproduction
+// only steps in when no image exists for the configured language.
+$contentTemplate = $viewModel->getImageUrl() !== ''
+    ? 'Smetana_Garant::notice/artwork.phtml'
+    : ($viewModel->getVariant($area) === \Smetana\Garant\Helper\Config::VARIANT_STANDARD
+        ? 'Smetana_Garant::notice/full.phtml'
+        : 'Smetana_Garant::notice/teaser.phtml');
+
+$expanded = (bool)$block->getData('garant_expanded');
+$collapsibleInit = json_encode([
+    'collapsible' => [
+        'openedState' => 'active',
+        'active' => $expanded,
+        'collapsible' => true,
+        'saveState' => false,
+    ],
+]);
+?>
+<div class="garant-panel<?= $expanded ? ' active' : '' ?>"
+     data-mage-init='<?= $block->escapeHtmlAttr($collapsibleInit) ?>'>
+    <div data-role="title" class="garant-panel__title">
+        <span class="garant-panel__icon" aria-hidden="true">
+            <?= /* @noEscape */ $viewModel->getArtworkShieldSvg() ?>
+        </span>
+        <span><?= $block->escapeHtml(__('Legal guarantee:')) ?></span>
+    </div>
+    <div data-role="content" class="garant-panel__content">
+        <?= $block->getLayout()
+            ->createBlock(\Smetana\Garant\Block\Notice::class)
+            ->setTemplate($contentTemplate)
+            ->setData('garant_area', $area)
+            ->toHtml() ?>
+        <button type="button" class="garant-panel__collapse"
+                data-mage-init='{"Smetana_Garant/js/garant-collapse":{}}'>
+            <?= $block->escapeHtml(__('Collapse')) ?>
+        </button>
+    </div>
+</div>

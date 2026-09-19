@@ -1,0 +1,16 @@
+<?php
+/** @var \Smetana\Garant\Block\Label $block */
+$viewModel = $block->getViewModel();
+$labelData = $block->getLabelData();
+if (!$labelData) {
+    return;
+}
+?>
+<div class="garant-item-label">
+    <?= $block->getLayout()
+        ->createBlock(\Magento\Framework\View\Element\Template::class)
+        ->setTemplate('Smetana_Garant::label/badge.phtml')
+        ->setData('label_data', $labelData)
+        ->setData('view_model', $viewModel)
+        ->toHtml() ?>
+</div>

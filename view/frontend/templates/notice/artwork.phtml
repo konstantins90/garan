@@ -1,0 +1,46 @@
+<?php
+/** @var \Smetana\Garant\Block\Notice $block */
+/** @var \Smetana\Garant\ViewModel\NoticeViewModel $viewModel */
+$viewModel = $block->getViewModel();
+$imageUrl = $viewModel->getImageUrl();
+if ($imageUrl === '') {
+    return;
+}
+
+$qrUrl = $viewModel->getQrUrl();
+$pdfUrls = $viewModel->getPdfUrls();
+?>
+<div class="garant-notice garant-notice--artwork">
+    <img class="garant-notice__art"
+         src="<?= $block->escapeUrl($imageUrl) ?>"
+         alt="<?= $block->escapeHtmlAttr($viewModel->getText('title')) ?>"
+         loading="lazy">
+
+    <?php if ($qrUrl !== ''): ?>
+        <p class="garant-notice__more-line">
+            <a class="garant-notice__portal" href="<?= $block->escapeUrl($qrUrl) ?>"
+               target="_blank" rel="noopener">
+                <?= $block->escapeHtml(__('More information on the Your Europe portal')) ?>
+            </a>
+        </p>
+    <?php endif; ?>
+
+    <?php if ($pdfUrls !== []): ?>
+        <?php
+        // One running line of country codes, so all 24 versions stay compact.
+        $links = [];
+        foreach ($pdfUrls as $language => $url) {
+            $links[] = sprintf(
+                '<a href="%s" target="_blank" rel="noopener" hreflang="%s">%s</a>',
+                $block->escapeUrl($url),
+                $block->escapeHtmlAttr(strtolower($language)),
+                $block->escapeHtml($language)
+            );
+        }
+        ?>
+        <p class="garant-notice__downloads">
+            <span class="garant-notice__downloads-label"><?= $block->escapeHtml(__('Notice as PDF:')) ?></span>
+            <?= /* @noEscape */ implode(' | ', $links) ?>
+        </p>
+    <?php endif; ?>
+</div>

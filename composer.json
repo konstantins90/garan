@@ -1,0 +1,45 @@
+{
+    "name": "smetana/module-garant",
+    "description": "Magento 2 module for the EU guarantee labels: harmonised legal guarantee notice (Annex I) and GARAN commercial durability guarantee label (Annex II) on product page, cart and checkout.",
+    "keywords": [
+        "magento2",
+        "magento-2",
+        "magento-module",
+        "eu",
+        "garan",
+        "guarantee",
+        "warranty",
+        "legal-guarantee",
+        "gewaehrleistung",
+        "garantielabel",
+        "compliance",
+        "regulation-2025-1960"
+    ],
+    "type": "magento2-module",
+    "license": "MIT",
+    "homepage": "https://github.com/konstantins90/garan",
+    "authors": [
+        {
+            "name": "Konstantin Smetana",
+            "email": "smetana@betriko.de"
+        }
+    ],
+    "require": {
+        "php": "~8.1.0||~8.2.0||~8.3.0||~8.4.0",
+        "magento/framework": "*",
+        "magento/module-catalog": "*",
+        "magento/module-checkout": "*",
+        "magento/module-cms": "*",
+        "magento/module-quote": "*",
+        "magento/module-store": "*",
+        "endroid/qr-code": "^4.0||^5.0"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Smetana\\Garant\\": ""
+        }
+    }
+}
