@@ -62,6 +62,16 @@ Die Verordnung zwingt zur Transparenz – aber Transparenz verkauft. Eine sichtb
 
 Code und Dokumentation: **https://github.com/konstantins90/garan**
 
+## Keine Zeit? Ich übernehme das
+
+Wenn im Team kein Magento-Entwickler sitzt oder der September näher kommt als die Kapazität: Ich installiere und konfiguriere das Modul in deinem Shop, mappe die Attribute auf deine bestehenden Produktdaten, pflege die Garantiedaten ein und prüfe die Darstellung auf Produktseite, im Warenkorb und im Checkout. Anfrage an **smetana@betriko.de**.
+
+## 🍺 Und wenn es dir ein Wochenende gespart hat
+
+Das Modul ist kostenlos, das Bier danach nicht: **[paypal.me/ksmetana](https://www.paypal.com/paypalme/ksmetana)**
+
+Rechne es dir schön: ein Wochenende Anhänge lesen gegen ein Bier – der Wechselkurs ist unschlagbar. Beer-driven development: Bugs werden nüchtern gefixt, Features mit guter Laune gebaut. 🍻
+
 ---
 
 *Dieser Beitrag ist eine technische Anleitung und ersetzt keine Rechtsberatung.*

@@ -15,6 +15,8 @@
 - [Konfiguration](#konfiguration)
 - [Produktattribute](#produktattribute)
 - [FAQ](#faq)
+- [🍺 Bier spendieren](#-modul-gefällt-spendier-mir-ein-bier)
+- [Installation übernehmen lassen](#installation-und-konfiguration-übernehmen-lassen)
 
 ---
 
@@ -178,6 +180,32 @@ Inter (Regular, SemiBold, ExtraBold) nach `view/frontend/web/fonts/inter/` legen
 **Funktioniert es mit mehreren Store Views?** Ja, alle Einstellungen inklusive Sprache der Grafik sind pro Store View überschreibbar.
 
 **Wo finde ich Marketing-Material?** Blogbeitrag und Social-Media-Texte liegen unter [`docs/`](docs).
+
+**Kann jemand die Einrichtung für mich machen?** Ja – siehe [Installation und Konfiguration übernehmen lassen](#installation-und-konfiguration-übernehmen-lassen).
+
+## 🍺 Modul gefällt? Spendier mir ein Bier
+
+Das Modul ist kostenlos, das Bier danach nicht: **[paypal.me/ksmetana](https://www.paypal.com/paypalme/ksmetana)**
+
+Rechnerisch hat dich die Verordnung damit ein Wochenende weniger gekostet – ein Wochenende ist ungefähr sechs Bier wert. Ich runde großzügig ab und nehme auch eins. 🍻
+
+*Beer-driven development: Bugs werden nüchtern gefixt, Features mit guter Laune gebaut.*
+
+**EN:** The module is free, the beer afterwards is not – [paypal.me/ksmetana](https://www.paypal.com/paypalme/ksmetana). If this saved you a weekend of reading annexes, one beer is a fair exchange rate. 🍻
+
+## Installation und Konfiguration übernehmen lassen
+
+Kein Magento-Entwickler im Haus oder einfach keine Zeit vor September? Ich übernehme das gerne:
+
+- Installation im Shop inklusive Staging-Test
+- Konfiguration je Store View, Sprache und Fläche
+- Attribut-Mapping auf deine bestehenden Produktdaten (`manufacturer`, `sku`, eigene Attribute)
+- Pflege der Garantiedaten für deine Produktpalette
+- Abnahme-Check auf Produktseite, im Warenkorb und im Checkout
+
+Anfrage per Mail an **smetana@betriko.de** oder als [GitHub-Issue](https://github.com/konstantins90/garan/issues).
+
+**EN:** Need it done for you? I install and configure the module in your shop, map the attributes onto your existing product data and verify the marks on product page, cart and checkout. Just write to **smetana@betriko.de**.
 
 ## Lizenz
 

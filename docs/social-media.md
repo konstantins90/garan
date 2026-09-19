@@ -1,6 +1,10 @@
 # Social-Media-Texte / social media copy
 
 Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
+Bier-Kasse für alle Posts: `https://www.paypal.com/paypalme/ksmetana`
+Service-Anfragen: `smetana@betriko.de`
+
+**Hinweis zu Instagram:** Captions verlinken nicht klickbar. Beide Links (GitHub und PayPal) in die Bio oder in den Link-in-Bio-Baukasten legen und in der Caption darauf verweisen.
 
 ---
 
@@ -20,6 +24,10 @@ Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
 > ✅ pro Produkt und pro Store View steuerbar
 >
 > Link in der Bio → GitHub: konstantins90/garan
+>
+> Keine Zeit oder kein Magento-Entwickler im Haus? Ich übernehme Installation und Konfiguration – schreib mir einfach. 📩
+>
+> Und wenn dir das Modul ein Wochenende Anhänge-Lesen erspart: 🍺 paypal.me/ksmetana – das Modul ist kostenlos, das Bier nicht.
 >
 > Keine Rechtsberatung, sondern fertiger Code. Speichern für September. 📌
 >
@@ -42,6 +50,10 @@ Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
 > Composer rein, fertig:
 > `composer require smetana/module-garant`
 >
+> Lieber machen lassen? Ich installiere und konfiguriere es in deinem Shop, inklusive Attribut-Mapping auf eure Produktdaten. DM oder smetana@betriko.de.
+>
+> Bier für den Entwickler: 🍺 paypal.me/ksmetana (Link in Bio). Spart Kosten, macht gute Laune.
+>
 > #magento2 #adobecommerce #ecommerce #conversion #produktseite #checkout #eurecht #garantie #haltbarkeit #nachhaltigkeit #onlineshop #entwicklung #opensource #magentodeveloper
 
 ---
@@ -62,6 +74,10 @@ Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
 > ✅ per product and per store view
 >
 > GitHub → konstantins90/garan
+>
+> No Magento developer around? I can install and configure it for you – just send a message. 📩
+>
+> Free module, paid beer: 🍺 paypal.me/ksmetana (link in bio). Beer-driven development – bugs fixed sober, features built in a good mood.
 >
 > #magento2 #adobecommerce #ecommerce #compliance #eulaw #warranty #guarantee #opensource #php #webdev #onlinestore #retailtech #productdata #ecommercedevelopment
 
@@ -93,6 +109,12 @@ Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
 **Thread 8 (CTA)**
 > Code, Doku und Screenshots: github.com/konstantins90/garan – Installation via `composer require smetana/module-garant`. Feedback und Issues willkommen. Keine Rechtsberatung, aber fertiger Code.
 
+**Thread 9 (Service)**
+> Wenn im Team kein Magento-Entwickler sitzt: Ich übernehme Installation, Konfiguration je Store View, das Attribut-Mapping auf eure bestehenden Produktdaten und den Abnahme-Check auf allen drei Flächen. Anfrage an smetana@betriko.de.
+
+**Thread 10 (Bier)**
+> Und falls dir das Modul ein Wochenende Anhänge-Lesen erspart hat: das Modul ist kostenlos, das Bier danach nicht. 🍺 paypal.me/ksmetana – Beer-driven development: Bugs werden nüchtern gefixt, Features mit guter Laune gebaut.
+
 ---
 
 ## Threads – EN
@@ -121,6 +143,12 @@ Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
 **Thread 8**
 > Code and docs: github.com/konstantins90/garan – install with `composer require smetana/module-garant`. Issues and feedback welcome. Not legal advice, just working code.
 
+**Thread 9 (service)**
+> No Magento developer on the team? I can take it over: installation, configuration per store view, attribute mapping onto your existing product data and a final check on product page, cart and checkout. Write to smetana@betriko.de.
+
+**Thread 10 (beer)**
+> And if this saved you a weekend of reading annexes: the module is free, the beer afterwards is not. 🍺 paypal.me/ksmetana – beer-driven development: bugs get fixed sober, features get built in a good mood.
+
 ---
 
 ## Kurz-Snippets (LinkedIn, X, Newsletter)
@@ -130,3 +158,25 @@ Repo-Link für alle Posts: `https://github.com/konstantins90/garan`
 
 **EN, 280 characters**
 > EU Regulation 2025/1960 applies from 27 Sep 2026: the legal guarantee notice and the GARAN label must be visible before purchase. Now available as an open source Magento 2 module – product page, cart, checkout, 24 languages, QR codes. github.com/konstantins90/garan
+
+**Antwort-Post / Reply (DE)**
+> Installation und Konfiguration übernehme ich auf Wunsch komplett – inklusive Attribut-Mapping und Abnahme-Check: smetana@betriko.de. Bier für den Entwickler: paypal.me/ksmetana 🍺
+
+**Reply (EN)**
+> Happy to take over installation and configuration, attribute mapping and the final check included: smetana@betriko.de. Beer for the developer: paypal.me/ksmetana 🍺
+
+---
+
+## Bausteine zum Wiederverwenden / reusable blocks
+
+**Bier, DE**
+> Das Modul ist kostenlos, das Bier danach nicht: 🍺 https://www.paypal.com/paypalme/ksmetana – ein Wochenende Anhänge-Lesen gegen ein Bier, besserer Wechselkurs geht nicht.
+
+**Beer, EN**
+> The module is free, the beer afterwards is not: 🍺 https://www.paypal.com/paypalme/ksmetana – a weekend of reading annexes versus one beer, unbeatable exchange rate.
+
+**Service, DE**
+> Installation, Konfiguration je Store View, Attribut-Mapping auf bestehende Produktdaten und Abnahme-Check auf Produktseite, Warenkorb und Checkout – kann ich übernehmen: smetana@betriko.de
+
+**Service, EN**
+> Installation, configuration per store view, attribute mapping onto existing product data and a final check on product page, cart and checkout – I can take that over: smetana@betriko.de

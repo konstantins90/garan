@@ -62,6 +62,16 @@ The regulation forces transparency – and transparency sells. A visible five ye
 
 Code and documentation: **https://github.com/konstantins90/garan**
 
+## No time? I can do it for you
+
+If there is no Magento developer on the team – or September arrives faster than your capacity – I install and configure the module in your shop, map the attributes onto your existing product data, fill in the guarantee values and verify the marks on product page, cart and checkout. Just write to **smetana@betriko.de**.
+
+## 🍺 And if it saved you a weekend
+
+The module is free, the beer afterwards is not: **[paypal.me/ksmetana](https://www.paypal.com/paypalme/ksmetana)**
+
+Do the maths: a weekend of reading annexes versus one beer – unbeatable exchange rate. Beer-driven development: bugs get fixed sober, features get built in a good mood. 🍻
+
 ---
 
 *This article is a technical guide and does not constitute legal advice.*
